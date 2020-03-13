@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>sonarqube</Name>
+  <Repository>sonarqube:community</Repository>
+  <Registry>https://hub.docker.com/_/sonarqube/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/_/sonarqube/</Support>
+  <Project/>
+  <Overview>SonarQube is an open source platform for continuous inspection of code quality.   Converted By Community Applications   Always verify this template (and values) against the dockerhub support page for the container</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:9000]</WebUI>
+  <TemplateURL/>
+  <Icon>https://www.sonarqube.org/images/downloads/picto.svg</Icon>
+  <ExtraParams>--stop-timeout 3600</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1584068746</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>SonarQube is an open source platform for continuous inspection of code quality.   Converted By Community Applications   Always verify this template (and values) against the dockerhub support page for the container</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>9000</HostPort>
+        <ContainerPort>9000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/sonarqube/data</HostDir>
+      <ContainerDir>/opt/sonarqube/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/sonarqube/extensions</HostDir>
+      <ContainerDir>/opt/sonarqube/extensions</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/sonarqube/logs</HostDir>
+      <ContainerDir>/opt/sonarqube/logs</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>jdbc:sqlserver://192.168.1.84;databaseName=sonarqube;integratedSecurity=true</Value>
+      <Name>sonar_jdbc_url</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>sonarqube</Value>
+      <Name>SONAR_JDBC_USERNAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>Scout9383Hannah!</Value>
+      <Name>SONAR_JDBC_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Host Port 1" Target="9000" Default="9000" Mode="tcp" Description="Container Port: 9000" Type="Port" Display="always" Required="false" Mask="false">9000</Config>
+  <Config Name="database url" Target="sonar_jdbc_url" Default="jdbc:sqlserver://localhost;databaseName=sonar;integratedSecurity=true" Mode="" Description="Container Variable: sonar_jdbc_url" Type="Variable" Display="always" Required="false" Mask="false">jdbc:sqlserver://192.168.1.84;databaseName=sonarqube;integratedSecurity=true</Config>
+  <Config Name="database username" Target="SONAR_JDBC_USERNAME" Default="" Mode="" Description="Container Variable: SONAR_JDBC_USERNAME" Type="Variable" Display="always" Required="false" Mask="false">sonarqube</Config>
+  <Config Name="database password" Target="SONAR_JDBC_PASSWORD" Default="" Mode="" Description="Container Variable: SONAR_JDBC_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false">Scout9383Hannah!</Config>
+  <Config Name="data" Target="/opt/sonarqube/data" Default="" Mode="rw" Description="Container Path: /opt/sonarqube/data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/sonarqube/data</Config>
+  <Config Name="sonarqube_extensions" Target="/opt/sonarqube/extensions" Default="" Mode="rw" Description="Container Path: /opt/sonarqube/extensions" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/sonarqube/extensions</Config>
+  <Config Name="sonarqube_logs" Target="/opt/sonarqube/logs" Default="" Mode="rw" Description="Container Path: /opt/sonarqube/logs" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/sonarqube/logs</Config>
+</Container>

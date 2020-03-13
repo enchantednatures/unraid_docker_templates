@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>mssql-server-linux</Name>
+  <Repository>microsoft-mssql-server</Repository>
+  <Registry>https://hub.docker.com/r/microsoft/mssql-server-linux/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/microsoft/mssql-server-linux/</Support>
+  <Project/>
+  <Overview>Deprecated SQL Server on Linux Container Repository. See below for more details.   Converted By Community Applications   Always verify this template (and values) against the dockerhub support page for the container</Overview>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>/plugins/dynamix.docker.manager/images/question.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1576370400</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Deprecated SQL Server on Linux Container Repository. See below for more details.   Converted By Community Applications   Always verify this template (and values) against the dockerhub support page for the container</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish/>
+  </Networking>
+  <Data/>
+  <Environment/>
+  <Labels/>
+</Container>

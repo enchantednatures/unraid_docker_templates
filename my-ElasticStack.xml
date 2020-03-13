@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>ElasticStack</Name>
+  <Repository>sebp/elk:latest</Repository>
+  <Registry>https://hub.docker.com/r/sebp/elk/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>true</Privileged>
+  <Support>https://hub.docker.com/r/sebp/elk/</Support>
+  <Project/>
+  <Overview>Collect, search and visualise log data with Elasticsearch, Logstash, and Kibana.</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:5601]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/FoxxMD/unraid-docker-templates/master/elasticsearch.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1583728478</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Collect, search and visualise log data with Elasticsearch, Logstash, and Kibana.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5601</HostPort>
+        <ContainerPort>5601</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>9200</HostPort>
+        <ContainerPort>9200</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>9300</HostPort>
+        <ContainerPort/>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data/>
+  <Environment>
+    <Variable>
+      <Value>America/New_York</Value>
+      <Name>TZ</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>65537</Value>
+      <Name>MAX_OPEN_FILES</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>-Xms3g -Xmx3g</Value>
+      <Name>ES_JAVA_OPTS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>1</Value>
+      <Name>ELASTICSEARCH_START</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>0</Value>
+      <Name>LOGSTASH_START</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>1</Value>
+      <Name>KIBANA_START</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>1G</Value>
+      <Name>ES_HEAP_SIZE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>elk</Value>
+      <Name>CLUSTER_NAME</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="TZ" Target="TZ" Default="" Mode="" Description="Container Variable: TZ" Type="Variable" Display="always" Required="false" Mask="false">America/New_York</Config>
+  <Config Name="MAX_OPEN_FILES" Target="MAX_OPEN_FILES" Default="" Mode="" Description="Container Variable: MAX_OPEN_FILES" Type="Variable" Display="always" Required="false" Mask="false">65537</Config>
+  <Config Name="ES_JAVA_OPTS" Target="ES_JAVA_OPTS" Default="" Mode="" Description="Container Variable: ES_JAVA_OPTS" Type="Variable" Display="always" Required="false" Mask="false">-Xms3g -Xmx3g</Config>
+  <Config Name="Kibana" Target="5601" Default="" Mode="tcp" Description="Container Port: 5601" Type="Port" Display="always" Required="false" Mask="false">5601</Config>
+  <Config Name="Elasticsearch" Target="9200" Default="" Mode="tcp" Description="Container Port: 9200" Type="Port" Display="always" Required="false" Mask="false">9200</Config>
+  <Config Name="9300" Target="" Default="" Mode="tcp" Description="Container Port: 9300" Type="Port" Display="always" Required="false" Mask="false">9300</Config>
+  <Config Name="ELASTICSEARCH_START" Target="ELASTICSEARCH_START" Default="" Mode="" Description="Container Variable: ELASTICSEARCH_START" Type="Variable" Display="always" Required="false" Mask="false">1</Config>
+  <Config Name="LOGSTASH_START" Target="LOGSTASH_START" Default="" Mode="" Description="Container Variable: LOGSTASH_START" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+  <Config Name="KIBANA_START" Target="KIBANA_START" Default="" Mode="" Description="Container Variable: KIBANA_START" Type="Variable" Display="always" Required="false" Mask="false">1</Config>
+  <Config Name="ES_HEAP_SIZE" Target="ES_HEAP_SIZE" Default="" Mode="" Description="Container Variable: ES_HEAP_SIZE" Type="Variable" Display="always" Required="false" Mask="false">1G</Config>
+  <Config Name="CLUSTER_NAME" Target="CLUSTER_NAME" Default="" Mode="" Description="Container Variable: CLUSTER_NAME" Type="Variable" Display="always" Required="false" Mask="false">elk</Config>
+</Container>

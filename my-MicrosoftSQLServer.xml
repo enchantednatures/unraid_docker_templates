@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>MicrosoftSQLServer</Name>
+  <Repository>mcr.microsoft.com/mssql/server:2019-latest</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>true</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE3JZS2?ver=ec69&amp;amp;q=90&amp;amp;m=6&amp;amp;h=423&amp;amp;w=752&amp;amp;b=%23FFFFFFFF&amp;amp;o=f&amp;amp;aim=true</Icon>
+  <ExtraParams>-m 8g --ulimit stack=8192000:8192000</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1582078024</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>1433</HostPort>
+        <ContainerPort>1433</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/mssql_server/var/</HostDir>
+      <ContainerDir>/var</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>TRUE</Value>
+      <Name>ACCEPT_EULA</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>H@nnah0772Scout!</Value>
+      <Name>SA_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>Developer</Value>
+      <Name>MSSQL_PID</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="ACCEPT_EULA" Target="ACCEPT_EULA" Default="Y" Mode="" Description="Container Variable: ACCEPT_EULA" Type="Variable" Display="always" Required="true" Mask="false">TRUE</Config>
+  <Config Name="SA_PASSWORD" Target="SA_PASSWORD" Default="" Mode="" Description="Container Variable: SA_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false">H@nnah0772Scout!</Config>
+  <Config Name="1433" Target="1433" Default="" Mode="tcp" Description="Container Port: 1433" Type="Port" Display="always" Required="false" Mask="false">1433</Config>
+  <Config Name="MSSQL_PID" Target="MSSQL_PID" Default="" Mode="" Description="Container Variable: MSSQL_PID" Type="Variable" Display="always" Required="false" Mask="false">Developer</Config>
+  <Config Name="MSSQL_SERVER_DATA" Target="/var" Default="/mnt/cache/appdata/mssql_server/var" Mode="rw" Description="Container Path: /var/opt/mssql/data" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/mssql_server/var/</Config>
+</Container>

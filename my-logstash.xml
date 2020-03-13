@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>logstash</Name>
+  <Repository>logstash:7.6.1</Repository>
+  <Registry>https://hub.docker.com/_/logstash/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/_/logstash/</Support>
+  <Project/>
+  <Overview>Logstash is a tool for managing events and logs.   Converted By Community Applications   Always verify this template (and values) against the dockerhub support page for the container</Overview>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://www.pngkey.com/png/full/25-250592_elastic-logstash-logo-png-transparent-logstash-logo.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1583733962</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Logstash is a tool for managing events and logs.   Converted By Community Applications   Always verify this template (and values) against the dockerhub support page for the container</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5044</HostPort>
+        <ContainerPort>5044</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/beats/logstash/config/</HostDir>
+      <ContainerDir>/usr/share/logstash/config/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/beats/logstash/config/pipelines/</HostDir>
+      <ContainerDir>/usr/share/logstash/pipeline/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Host Path 1" Target="/usr/share/logstash/config/" Default="" Mode="rw" Description="Container Path: /usr/share/logstash/config/" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/beats/logstash/config/</Config>
+  <Config Name="Host Path 2" Target="/usr/share/logstash/pipeline/" Default="" Mode="rw" Description="Container Path: /usr/share/logstash/pipeline/" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/beats/logstash/config/pipelines/</Config>
+  <Config Name="Host Port 1" Target="5044" Default="" Mode="tcp" Description="Container Port: 5044" Type="Port" Display="always" Required="false" Mask="false">5044</Config>
+</Container>
